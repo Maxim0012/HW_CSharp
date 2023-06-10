@@ -1,5 +1,5 @@
 ﻿
-//Домашка №2
+//Домашнее задание  №2
 /*
 Console.Clear();
 Console.Write("Введите целое число 1: ");
@@ -24,11 +24,7 @@ else
 
 
 
-
-
-
-
-//Домашка №4
+//Домашнее задание  №4
 /*
 Console.Write("Введите целое число 1: ");
 string userInput = Console.ReadLine() ?? "";
@@ -53,7 +49,8 @@ if (userNumber2 > max)
 Console.WriteLine($"Максимальное число: {max}");
 */
 
-//Домашка №6
+
+//Домашнее задание №6
 /*
 Console.Clear();
 Console.Write("Введите число: ");
@@ -69,7 +66,10 @@ else
 }
 */
 
-//Домашка №8
+
+
+//Домашнее задание №8
+/*
 Console.Clear();
 int i = 1;
 
@@ -84,4 +84,4 @@ while (i <= userNumber)
     }
     i++;
 }
-
+*/
