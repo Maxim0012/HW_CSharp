@@ -55,3 +55,21 @@ int C = c1 - c2;
 double distance = Math.Sqrt(A * A + B * B + C * C);
 Console.WriteLine($"A: ({a1}, {b1}, {c1}) B: ({a2}, {b2}, {c2}) ---> {distance}");
 */
+
+//Задача 23
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+/*
+Console.Clear();
+Console.WriteLine("Введите целое число: ");
+int a = int.Parse(Console.ReadLine() ?? "");
+int b = 0;
+
+Console.Write($"{a} -->");
+while (b != a - 1)
+{
+    b++;
+    Console.Write($" {b * b * b}, ");
+}
+b++;
+Console.Write($" {b * b * b}. ");
+*/
