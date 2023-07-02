@@ -3,7 +3,7 @@ Console.Clear();
 int Promt(string massage)
 {
     Console.Write(massage);
-    string value = Console.ReadLine();
+    string value = Console.ReadLine() ?? "";
     int result = Convert.ToInt32(value);
     return result;
 }
