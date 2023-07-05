@@ -3,17 +3,20 @@
 //и возвращает значение этого элемента или же указание, что такого элемента нет.
 Console.Clear();
 
-int rows = ReadInt("Введите индекс строки: ");
-int colums = ReadInt("Введите индекс столбца: ");
-int[,] numbers = new int[6, 8];
-FillArray2D(numbers);
-PrintArray2D(numbers);
 
+Console.WriteLine("Введите количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов: ");
+int colums = Convert.ToInt32(Console.ReadLine());
+int[,] numbers = new int[6, 8];
+FillArray(numbers);
+PrintArray(numbers);
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 if (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) Console.WriteLine(numbers[rows, colums]);
 else Console.WriteLine($"{rows}{colums} -> такого числа в массиве нет");
 
-
-void FillArray2D(int[,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -24,7 +27,7 @@ void FillArray2D(int[,] array)
     }
 }
 
-void PrintArray2D(int[,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -35,10 +38,4 @@ void PrintArray2D(int[,] array)
         Console.WriteLine();
     }
     Console.WriteLine();
-}
-
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
 }
