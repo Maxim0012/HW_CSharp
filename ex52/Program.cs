@@ -11,6 +11,8 @@ int[,] numbers = new int[rows, colums];
 FillArray(numbers);
 PrintAvgNubmers(numbers);
 
+/////////////////////////////////////////////////////////////////
+
 double[] avgNumbers = new double[numbers.GetLength(1)];
 
 for (int i = 0; i < numbers.GetLength(1); i++)
