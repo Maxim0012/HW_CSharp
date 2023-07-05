@@ -1,14 +1,15 @@
 ﻿//Задача №47
 //Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-
-int rows = ReadInt("Введите количество строк: ");
-int colums = ReadInt("Введите количество столбцов: ");
+Console.WriteLine("Введите количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов: ");
+int colums = Convert.ToInt32(Console.ReadLine());
 double[,] numbers = new double[rows, colums];
-FillArray2D(numbers);
-PrintArray2D(numbers);
+FillArray(numbers);
+PrintArray(numbers);
 
-
-void FillArray2D(double[,] array)
+////////////////////////////////////////////////////////////////////////////////////////
+void FillArray(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -20,7 +21,7 @@ void FillArray2D(double[,] array)
 }
 
 
-void PrintArray2D(double[,] array)
+void PrintArray(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -31,11 +32,4 @@ void PrintArray2D(double[,] array)
         Console.WriteLine();
     }
     Console.WriteLine();
-}
-
-
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
 }
