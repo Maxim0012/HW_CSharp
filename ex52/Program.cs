@@ -2,11 +2,14 @@
 //Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 Console.Clear();
 
-int rows = 3;
-int colums = 4;
+Console.WriteLine("Введите количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов: ");
+int colums = Convert.ToInt32(Console.ReadLine());
+
 int[,] numbers = new int[rows, colums];
-FillArray2D(numbers);
-PrintArray2D(numbers);
+FillArray(numbers);
+PrintAvgNubmers(numbers);
 
 double[] avgNumbers = new double[numbers.GetLength(1)];
 
@@ -22,7 +25,7 @@ for (int i = 0; i < numbers.GetLength(1); i++)
 PrintArray(avgNumbers);
 
 
-void FillArray2D(int[,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -34,7 +37,7 @@ void FillArray2D(int[,] array)
 }
 
 
-void PrintArray2D(int[,] array)
+void PrintAvgNubmers(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -47,7 +50,6 @@ void PrintArray2D(int[,] array)
     Console.WriteLine();
 }
 
-
 void PrintArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -55,11 +57,4 @@ void PrintArray(double[] array)
         Console.Write(array[i] + " ");
     }
     Console.WriteLine();
-}
-
-
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
 }
