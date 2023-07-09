@@ -4,13 +4,18 @@
 
 Console.Clear();
 Console.WriteLine("Введите размер массива a x b и диапазон случайных значений:");
-int a = InputNumbers("Введите a: ");
-int b = InputNumbers("Введите b: ");
-int range = InputNumbers("Введите диапазон: от 1 до ");
+Console.WriteLine("Введите a: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите b: ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите диапазон: от 1 до ");
+int range = Convert.ToInt32(Console.ReadLine());
 
 int[,] array = new int[a, b];
 Array(array);
 WriteArray(array);
+
+
 
 int minSumLine = 0;
 int sumLine = SumElements(array, 0);
@@ -35,13 +40,6 @@ int SumElements(int[,] array, int i)
         sumLine += array[i, j];
     }
     return sumLine;
-}
-
-int InputNumbers(string input)
-{
-    Console.Write(input);
-    int output = Convert.ToInt32(Console.ReadLine());
-    return output;
 }
 
 void Array(int[,] array)
